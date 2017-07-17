@@ -1,19 +1,25 @@
 <template>
   <nav class="nav">
     <div class="nav__item">
-      <a href="javascript:void(0)" 
-          title="" 
-          class="nav__link nav__link--left nav__link--active">RANDOM</a>
+      <router-link to="/" 
+          class="nav__link nav__link--left"
+          :class="{'nav__link--active': tabActive === 'random'}">
+        RANDOM
+      </router-link>
     </div>
     <div class="nav__item">
-      <a href="javascript:void(0)" 
-          title="" 
-          class="nav__link">CATEGORIES</a>
+      <router-link to="/categories/" 
+          class="nav__link"
+          :class="{'nav__link--active': tabActive === 'categories'}">
+        CATEGORIES
+      </router-link>
     </div>
     <div class="nav__item">
-      <a href="javascript:void(0)" 
-          title="" 
-          class="nav__link nav__link--right">SEARCH</a>
+      <router-link to="/search/" 
+          class="nav__link nav__link--right"
+          :class="{'nav__link--active': tabActive === 'search'}">
+        SEARCH
+      </router-link>
     </div>
   </nav>
 </template>
@@ -22,6 +28,7 @@
 
 export default {
   name: 'TabSection',
+  props: ['tabActive'],
   data () {
     return {
     }

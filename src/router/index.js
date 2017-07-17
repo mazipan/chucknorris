@@ -12,6 +12,16 @@ var router = new Router({
       component: Home
     },
     {
+      path: '/categories',
+      name: 'Categories',
+      component: view('Categories')
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: view('Search')
+    },
+    {
       path: '/about',
       name: 'About',
       component: view('About')

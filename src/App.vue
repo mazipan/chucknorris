@@ -8,7 +8,7 @@
     <header-section @toggleSidebar="toggleSidebar"></header-section>
 
 
-    <tab-section></tab-section>
+    <tab-section :tabActive="tabActive"></tab-section>
     
 
     <div class="loading" v-show="isLoading">
@@ -37,7 +37,7 @@ export default {
   name: 'app',
   components: {Sidebar, HeaderSection, TabSection},
   computed: {
-    ...mapGetters(['isShowSidebar', 'isLoading'])
+    ...mapGetters(['isShowSidebar', 'isLoading', 'tabActive'])
   },
   created () {
 

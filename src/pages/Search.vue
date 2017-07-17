@@ -15,7 +15,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'HomePage',
+  name: 'SearchPage',
   data () {
     return {
     }
@@ -24,7 +24,7 @@ export default {
     ...mapGetters(['iamChuckNorris'])    
   },
   activated () {
-    this.$store.commit('setTabActive', 'random')
+    this.$store.commit('setTabActive', 'search')
   }
 }
 
