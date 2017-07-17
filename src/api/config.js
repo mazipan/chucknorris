@@ -1,5 +1,5 @@
 export default {
   api: {
-    base_path: '//api.chucknorris.io/'
+    base_path: 'https://api.chucknorris.io/'
   }
 }

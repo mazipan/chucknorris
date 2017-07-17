@@ -14,7 +14,10 @@ function getDataViaApi (path, cb, errorHandler, payload) {
     cb(sessionRes)
   } else {
     Vue.http.get(path, {
-      params: payload
+      params: payload,
+      headers: {
+        'Accept': '(application/json|text/plain)'
+      }
     }).then((res) => {
       console.log('You just call api : ', path)
       saveDataToStorage(path, res)

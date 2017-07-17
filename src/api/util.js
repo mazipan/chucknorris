@@ -1,3 +1,8 @@
+
+import config from './config'
+const base_path = config.api.base_path
+const whitelist = `${base_path}jokes/random`
+
 export function saveDataToStorage (path, data) {
   try {
     let obj = {
@@ -14,7 +19,7 @@ export function saveDataToStorage (path, data) {
 
 export function checkDataFromStorage (path, checkWhitelist) {
   let res = null
-  if (checkWhitelist && res === whitelist) return res
+  if (checkWhitelist && path === whitelist) return res
   try {
     let sessionDataString = sessionStorage.getItem(path)
     if (sessionDataString) {
