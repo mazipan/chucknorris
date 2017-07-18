@@ -37,7 +37,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Header',
   data () {
@@ -62,7 +61,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>

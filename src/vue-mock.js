@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import MockRoutes from 'src/api/mock'
+import Url from 'url'
 
 let routes = MockRoutes.routes
-
-import Url from 'url'
 
 Vue.use(VueResource)
 

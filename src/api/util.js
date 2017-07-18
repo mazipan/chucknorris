@@ -1,7 +1,7 @@
 
 import config from './config'
-const base_path = config.api.base_path
-const whitelist = `${base_path}jokes/random`
+const basePath = config.api.base_path
+const whitelist = `${basePath}jokes/random`
 
 export function saveDataToStorage (path, data) {
   try {
@@ -10,8 +10,7 @@ export function saveDataToStorage (path, data) {
       created: new Date().getTime()
     }
     let dataString = JSON.stringify(obj)
-    
-    sessionStorage.setItem(path, dataString)    
+    sessionStorage.setItem(path, dataString)
   } catch (error) {
     console.log('failed save to storage', error)
   }
@@ -29,7 +28,6 @@ export function checkDataFromStorage (path, checkWhitelist) {
         res = temp.data
       }
     }
-    
   } catch (error) {
     console.log('failed read from storage', error)
   }

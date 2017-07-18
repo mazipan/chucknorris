@@ -5,8 +5,8 @@ let routes = [{
   response: {
     "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
     "id": "HlIEjvcuSU-Zwl0ET8XXeA",
-    "url": "http://api.chucknorris.io/jokes/HlIEjvcuSU-Zwl0ET8XXeA"
-    "value": "Chuck Norris sired a baseball team...and a football team if you count all of the bastards."
+    "url": "http://api.chucknorris.io/jokes/HlIEjvcuSU-Zwl0ET8XXeA",
+    "value": "What are you thinking about right now?  Chuck Norris says you're thinking about a teddy bear riding a unicycle. If you aren't, your last and shortly upcoming sight will be a GRIZZLY bear riding a MOTORcycle, which is one of the weaker pets of Chuck Norris."
   }
 }, {
   method: 'GET',

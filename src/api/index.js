@@ -4,8 +4,8 @@ import Vue from 'vue'
 import config from './config'
 import {saveDataToStorage, checkDataFromStorage} from './util'
 
-const base_path = config.api.base_path
-const whitelist = `${base_path}jokes/random`
+const basePath = config.api.base_path
+const whitelist = `${basePath}jokes/random`
 
 function getDataViaApi (path, cb, errorHandler, payload) {
   let sessionRes = checkDataFromStorage(path, true)
@@ -33,19 +33,19 @@ function getDataViaApi (path, cb, errorHandler, payload) {
 
 export default {
   getRandomJokes: (cb, errorHandler) => {
-    let path = `${base_path}jokes/random`
+    let path = `${basePath}jokes/random`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getRandomJokesByCategory: (cb, errorHandler, category) => {
-    let path = `${base_path}jokes/random?category=${category}`
+    let path = `${basePath}jokes/random?category=${category}`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getCategories: (cb, errorHandler) => {
-    let path = `${base_path}jokes/categories`
+    let path = `${basePath}jokes/categories`
     getDataViaApi(path, cb, errorHandler, null)
   },
   searchJokes: (cb, errorHandler, keyword) => {
-    let path = `${base_path}jokes/search?query=${keyword}`
+    let path = `${basePath}jokes/search?query=${keyword}`
     getDataViaApi(path, cb, errorHandler, null)
-  },
+  }
 }

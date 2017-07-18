@@ -55,6 +55,7 @@
     "eslint-plugin-html": "^3.0.0",
     "eslint-plugin-import": "latest",
     "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-standard": "^3.0.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.15.3",
