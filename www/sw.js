@@ -1,7 +1,7 @@
 (global => {
   'use strict';
 
-  var versionCache = '-chucknorris-v0.0.1'
+  var versionCache = '-chucknorris-v0.0.3'
 
   // Load the sw-tookbox library.
   importScripts('/chucknorris/sw/sw-toolbox.js');
@@ -60,7 +60,7 @@
     },
     origin: /\.assets\.chucknorris\.host$/
   });
-  toolbox.router.get('/jokes/random/(.*)', global.toolbox.networkFirst, {
+  toolbox.router.get('/jokes/random(.*)', global.toolbox.networkFirst, {
     cache: {
       name: 'chucknorris-api',
       maxEntries: 200,

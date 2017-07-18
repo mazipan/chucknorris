@@ -33,19 +33,19 @@ function getDataViaApi (path, cb, errorHandler, payload) {
 
 export default {
   getRandomJokes: (cb, errorHandler) => {
-    let path = `${basePath}jokes/random/`
+    let path = `${basePath}jokes/random`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getRandomJokesByCategory: (cb, errorHandler, category) => {
-    let path = `${basePath}jokes/random/?category=${category}`
+    let path = `${basePath}jokes/random?category=${category}`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getCategories: (cb, errorHandler) => {
-    let path = `${basePath}jokes/categories/`
+    let path = `${basePath}jokes/categories`
     getDataViaApi(path, cb, errorHandler, null)
   },
   searchJokes: (cb, errorHandler, keyword) => {
-    let path = `${basePath}jokes/search/?query=${keyword}`
+    let path = `${basePath}jokes/search?query=${keyword}`
     getDataViaApi(path, cb, errorHandler, null)
   }
 }

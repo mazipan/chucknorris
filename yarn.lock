@@ -2175,7 +2175,7 @@ eslint-plugin-import@latest:
 
 eslint-plugin-node@^5.1.0:
   version "5.1.0"
-  resolved "http://172.17.21.101:8081/eslint-plugin-node/-/eslint-plugin-node-5.1.0.tgz#bc8cdb85180d0b4d946a2531640e2a4dd7a4e6d4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.1.0.tgz#bc8cdb85180d0b4d946a2531640e2a4dd7a4e6d4"
   dependencies:
     ignore "^3.3.3"
     minimatch "^3.0.4"
