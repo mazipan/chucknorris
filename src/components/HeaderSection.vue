@@ -14,29 +14,16 @@
           </router-link>
       </div>
       <div class="header__nav pointer">
-        <a class="header__search" href="javascript:void(0)" @click="toggleSearchBlock" title="Search User">
-          <i class="fa fa-search"></i>
+        <a class="header__search" href="javascript:void(0)">
+          <img class="icon" :src="iamChuckNorris"/>
         </a>
       </div>
     </div> 
-    <div class="search" v-if="showSearchBlock">
-      <input 
-        type="text" 
-        name="keyword" 
-        placeholder="Type keyword to search"
-        class="search__text"
-        @keyup.enter="doSearch"
-        v-model="keyword"/>
-      <button 
-        class="search__btn"
-        @click="doSearch"  title="Search User">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
   </header>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Header',
   data () {
@@ -45,19 +32,12 @@ export default {
       keyword: ''
     }
   },
+  computed: {
+    ...mapGetters(['iamChuckNorris'])    
+  },
   methods: {
     toggleSidebar: function () {
       this.$emit('toggleSidebar')
-    },
-    toggleSearchBlock: function () {
-      this.showSearchBlock = !this.showSearchBlock
-    },
-    doSearch: function () {
-      if (this.keyword !== '') {
-        this.showSearchBlock = false
-        this.$router.push('/search/?q=' + this.keyword)
-        this.keyword = ''
-      }
     }
   }
 }
@@ -116,35 +96,5 @@ export default {
     color: #fff;
     font-size: 30px;
   }
-}
-
-.search{
-    position: fixed;
-    top: 60px;
-    right: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-    color: #fff;
-    border-bottom: .5em solid #f05724;
-    cursor: pointer;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__text{
-      width: 100%;
-      padding: 12px;
-      outline: none;
-      border: 0;
-    }
-    &__btn{
-      width: 70px;
-      padding: 12px;
-      outline: none;
-      border: 0;
-    }
 }
 </style>
