@@ -9,12 +9,30 @@ Chuck Norris Jokes built with VueJS + api.chucknorris.io
 [![Travis](https://img.shields.io/travis/mazipan/chucknorris.svg)](https://travis-ci.org/mazipan/chucknorris)
 [![codecov](https://codecov.io/gh/mazipan/chucknorris/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/chucknorris)
 
+[![ChuckNorris](https://raw.githubusercontent.com/mazipan/chucknorris/master/static/images/chucknorris-logo.png)](https://mazipan.github.io/chucknorris/)
+
 
 ## Who is Chuck Norris ?
 https://en.m.wikipedia.org/wiki/Chuck_Norris
 
+
 ## API
 https://api.chucknorris.io/
+
+
+### Technology Used
++ Vue.js
++ Vue-Router
++ Vue-Resources
++ Webpack
+
+### Code Structure
++ All `webpack` configuration for build production and development is in folder [build](https://github.com/mazipan/explore-github/tree/master/build)
++ Folder [config](https://github.com/mazipan/explore-github/tree/master/config) is project configuration that used by `webpack` build
++ All `Vue` code is in [src](https://github.com/mazipan/explore-github/tree/master/src) folder
++ Folder [static](https://github.com/mazipan/explore-github/tree/master/static) is for external js, css and public image
++ Folder [test](https://github.com/mazipan/explore-github/tree/master/test/unit) is used for unit test all `Vue Component`
++ Folder [www](https://github.com/mazipan/explore-github/tree/master/www) is setup for `pwa` need, like `manifest.json`, `sw.js`, etc
 
 
 **Hope will usefull for you all.**
