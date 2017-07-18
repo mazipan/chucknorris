@@ -18,7 +18,7 @@ export function saveDataToStorage (path, data) {
 
 export function checkDataFromStorage (path, checkWhitelist) {
   let res = null
-  if (checkWhitelist && path === whitelist) return res
+  if (checkWhitelist && path.indexOf(whitelist) >= 0) return res
   try {
     let sessionDataString = sessionStorage.getItem(path)
     if (sessionDataString) {
