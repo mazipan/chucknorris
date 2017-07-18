@@ -1,7 +1,7 @@
 (global => {
   'use strict';
 
-  var versionCache = '-chucknorris-20170718-8-30'
+  var versionCache = '-chucknorris-20170718-8-40'
 
   // Load the sw-tookbox library.
   importScripts('/chucknorris/sw/sw-toolbox.js');
