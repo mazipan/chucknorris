@@ -27,8 +27,6 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.25.0",
@@ -55,6 +53,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.8.0",
     "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "latest",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "eventsource-polyfill": "^0.9.6",
