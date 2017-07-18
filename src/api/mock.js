@@ -1,7 +1,7 @@
 /* eslint-disable */
 let routes = [{
   method: 'GET',
-  url: '//api.chucknorris.io/jokes/random',
+  url: '/jokes/random/',
   response: {
     "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
     "id": "HlIEjvcuSU-Zwl0ET8XXeA",
@@ -10,7 +10,7 @@ let routes = [{
   }
 }, {
   method: 'GET',
-  url: '//api.chucknorris.io/jokes/random',
+  url: '/jokes/random/',
   params: {
     category: 'explicit'
   },
@@ -23,7 +23,7 @@ let routes = [{
   }
 }, {
   method: 'GET',
-  url: '//api.chucknorris.io/jokes/categories',
+  url: '/jokes/categories/',
   response: [
     "explicit",
     "dev",
@@ -44,7 +44,7 @@ let routes = [{
   ]
 }, {
   method: 'GET',
-  url: '//api.chucknorris.io/jokes/search',
+  url: '/jokes/search/',
   params: {
     query: 'vehicle'
   },

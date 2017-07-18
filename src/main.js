@@ -18,7 +18,7 @@ Vue.use(VueLazyload, {
 })
 
 if (process.env.NODE_ENV !== 'production') {
-  // require('vue-mock')
+  require('vue-mock')
   Vue.config.devtools = true
 }
 

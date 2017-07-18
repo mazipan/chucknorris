@@ -1,25 +1,28 @@
 <template>
   <nav class="nav" v-if="tabActive !== ''">
     <div class="nav__item">
-      <router-link to="/" 
+      <a href="javascript:void(0)" 
+          @click="changeTabActive('random')"
           class="nav__link nav__link--left"
           :class="{'nav__link--active': tabActive === 'random'}">
         RANDOM
-      </router-link>
+      </a>
     </div>
     <div class="nav__item">
-      <router-link to="/categories/" 
+      <a href="javascript:void(0)" 
+          @click="changeTabActive('categories')"
           class="nav__link"
           :class="{'nav__link--active': tabActive === 'categories'}">
         CATEGORIES
-      </router-link>
+      </a>
     </div>
     <div class="nav__item">
-      <router-link to="/search/" 
+      <a href="javascript:void(0)" 
+          @click="changeTabActive('search')"
           class="nav__link nav__link--right"
           :class="{'nav__link--active': tabActive === 'search'}">
         SEARCH
-      </router-link>
+      </a>
     </div>
   </nav>
 </template>
@@ -34,6 +37,12 @@ export default {
     }
   },
   methods: {
+    changeTabActive: function (tabName) {
+      this.$store.commit('setTabActive', tabName)
+      if (tabName === 'random') {
+        this.$router.push('/')
+      } else this.$router.push('/' + tabName)  
+    }
   }
 }
 
@@ -63,6 +72,7 @@ export default {
 
     &--active{
       background-color: darken(#f05724, 10%);
+      font-weight: bold;
     }
 
     &--left{

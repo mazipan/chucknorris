@@ -4,19 +4,23 @@ import MockRoutes from 'src/api/mock'
 import Url from 'url'
 
 let routes = MockRoutes.routes
+console.log('routes mock : ', routes)
 
 Vue.use(VueResource)
 
 if (process.env.NODE_ENV !== 'production') {
+  console.log('starting mock')
   Vue.http.interceptors.unshift((request, next) => {
     let urlParse = Url.parse(request.url, true)
     let urlPath = urlParse.pathname
     let urlQuery = urlParse.query
+    
     let route = routes.find((item) => {
+      console.log(urlPath, item.url)
       return (request.method === item.method && urlPath === item.url)
     })
-    console.log(urlPath)
-    console.log(urlQuery)
+    console.log('path: ', urlPath)
+    console.log('query: ', urlQuery)
     if (!route) {
       // we're just going to return a 404 here, since we don't want our test suite making a real HTTP request
       next(request.respondWith({status: 404, statusText: 'Oh no! Not found!'}))

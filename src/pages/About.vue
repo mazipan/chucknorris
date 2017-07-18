@@ -39,7 +39,7 @@
 <script>
 export default {
   name: 'AboutPage',
-  activated () {
+  mounted () {
     this.$store.commit('setTabActive', '')
   }
 }

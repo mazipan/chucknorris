@@ -17,9 +17,19 @@ var router = new Router({
       component: view('Categories')
     },
     {
+      path: '/category/jokes',
+      name: 'CategoryJokes',
+      component: view('CategoryJokes')
+    },
+    {
       path: '/search',
       name: 'Search',
       component: view('Search')
+    },
+    {
+      path: '/search/detail',
+      name: 'SearchDetail',
+      component: view('SearchDetail')
     },
     {
       path: '/about',

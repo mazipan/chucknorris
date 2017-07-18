@@ -60,7 +60,7 @@
     },
     origin: /\.assets\.chucknorris\.host$/
   });
-  toolbox.router.get('/jokes/random', global.toolbox.networkFirst, {
+  toolbox.router.get('/jokes/random/(.*)', global.toolbox.networkFirst, {
     cache: {
       name: 'chucknorris-api',
       maxEntries: 200,

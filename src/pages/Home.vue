@@ -38,7 +38,7 @@ export default {
       this.$store.dispatch('getRandomJokes')
     }
   },
-  activated () {
+  mounted () {
     this.$store.commit('setTabActive', 'random')
     this.generateJokes()
   }
@@ -73,22 +73,22 @@ export default {
 }
 
 .btn__jokes{
-    margin: 20px;
-    display: inline-block;
-    padding: 13px 20px;
-    outline: none;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #f05724;
-    color: #fff;
-    border-radius: .5em;
+  margin: 20px;
+  display: inline-block;
+  padding: 13px 20px;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #f05724;
+  color: #fff;
+  border-radius: .5em;
 
-    -webkit-appearance : none;
-    -moz-appearance : none;
-    appearance : none;
+  -webkit-appearance : none;
+  -moz-appearance : none;
+  appearance : none;
 
-    &--wrapper{text-align: center;}
-  }
+  &--wrapper{text-align: center;}
+}
 </style>
