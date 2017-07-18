@@ -1,7 +1,7 @@
 (global => {
   'use strict';
 
-  var versionCache = '-chucknorris-v0.0.3'
+  var versionCache = '-chucknorris-v0.0.4'
 
   // Load the sw-tookbox library.
   importScripts('/chucknorris/sw/sw-toolbox.js');
@@ -60,10 +60,18 @@
     },
     origin: /\.assets\.chucknorris\.host$/
   });
+  toolbox.router.get('/jokes/random?category=(.*)', global.toolbox.networkFirst, {
+    cache: {
+      name: 'chucknorris-api',
+      maxEntries: 500,
+      maxAgeSeconds: 518400,
+    },
+    origin: /\.api\.chucknorris\.io$/
+  });
   toolbox.router.get('/jokes/random(.*)', global.toolbox.networkFirst, {
     cache: {
       name: 'chucknorris-api',
-      maxEntries: 200,
+      maxEntries: 500,
       maxAgeSeconds: 518400,
     },
     origin: /\.api\.chucknorris\.io$/
