@@ -2,6 +2,9 @@
 let routes = [{
   method: 'GET',
   url: '/jokes/random',
+  params: {
+    timestamp: 1234567890
+  },
   response: {
     "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
     "id": "HlIEjvcuSU-Zwl0ET8XXeA",
@@ -12,7 +15,8 @@ let routes = [{
   method: 'GET',
   url: '/jokes/random',
   params: {
-    category: 'explicit'
+    category: 'explicit',
+    timestamp: 1234567890
   },
   response: {
     "category": null,

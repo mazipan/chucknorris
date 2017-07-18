@@ -8,7 +8,13 @@ const basePath = config.api.base_path
 const whitelist = `${basePath}jokes/random`
 
 function getDataViaApi (path, cb, errorHandler, payload) {
-  let sessionRes = checkDataFromStorage(path, true)
+  let sessionRes = null
+  let cleanPath = path.replace(/[0-9]/g, '').replace('?timestamp=', '').replace('&timestamp=', '')
+  if (path.indexOf('random') >= 0) {
+    sessionRes = checkDataFromStorage(cleanPath, true)
+  } else {
+    sessionRes = checkDataFromStorage(path, true)
+  }
   if (sessionRes !== null) {
     console.log('Read from session data : ', path)
     cb(sessionRes)
@@ -20,7 +26,11 @@ function getDataViaApi (path, cb, errorHandler, payload) {
       }
     }).then((res) => {
       console.log('You just call api : ', path)
-      saveDataToStorage(path, res)
+      if (path.indexOf('random') >= 0) {
+        saveDataToStorage(cleanPath, res)
+      } else {
+        saveDataToStorage(path, res)
+      }      
       cb(res)
     }, (error) => {
       console.log('Sorry, api ' + path + ' error : ', error)
@@ -33,11 +43,13 @@ function getDataViaApi (path, cb, errorHandler, payload) {
 
 export default {
   getRandomJokes: (cb, errorHandler) => {
-    let path = `${basePath}jokes/random`
+    let timeStamp = new Date().getTime()
+    let path = `${basePath}jokes/random?timestamp=${timeStamp}`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getRandomJokesByCategory: (cb, errorHandler, category) => {
-    let path = `${basePath}jokes/random?category=${category}`
+    let timeStamp = new Date().getTime()
+    let path = `${basePath}jokes/random?category=${category}&timestamp=${timeStamp}`
     getDataViaApi(path, cb, errorHandler, null)
   },
   getCategories: (cb, errorHandler) => {
