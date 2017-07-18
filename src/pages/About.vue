@@ -37,10 +37,11 @@
 </template>
 
 <script>
-
 export default {
   name: 'AboutPage',
-  computed: {}
+  activated () {
+    this.$store.commit('setTabActive', '')
+  }
 }
 
 </script>

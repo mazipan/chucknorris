@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav class="nav" v-if="tabActive !== ''">
     <div class="nav__item">
       <router-link to="/" 
           class="nav__link nav__link--left"
