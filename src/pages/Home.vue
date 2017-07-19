@@ -5,7 +5,14 @@
       <img class="chuck__img" :src="randomJokes.icon_url" alt="">
       <div class="chuck__jokes">
         {{ randomJokes.value }}
-      </div>  
+      </div>
+
+      <social-sharing-section 
+      title="Chuck Norris Jokes"
+      :description="randomJokes.value"
+      :qoute="randomJokes.value">        
+      </social-sharing-section>
+
     </div>
 
     <div class="empty-state" v-if="!randomJokes || !randomJokes.value">      
@@ -24,8 +31,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import SocialSharingSection from 'components/SocialSharingSection'
+
 export default {
   name: 'HomePage',
+  components: {
+    SocialSharingSection
+  },
   data () {
     return {
     }

@@ -54,8 +54,8 @@
     "eslint-loader": "^1.8.0",
     "eslint-plugin-html": "^3.0.0",
     "eslint-plugin-import": "latest",
-    "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.15.3",
@@ -95,6 +95,7 @@
     "vue-router": "^2.6.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.4",
+    "vue-social-sharing": "^2.2.3",
     "vue2-simplert": "^0.2.8",
     "vuex": "^2.3.1",
     "webpack": "^2.6.1",
@@ -103,5 +104,7 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
     "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
   }
 }

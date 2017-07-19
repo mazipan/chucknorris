@@ -4,6 +4,7 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueLazyload from 'vue-lazyload'
+import SocialSharing from 'vue-social-sharing'
 
 import router from 'src/router'
 import store from 'src/store'
@@ -16,6 +17,7 @@ Vue.use(VueLazyload, {
   loading: '/chucknorris/static/images/loading.gif',
   attempt: 1
 })
+Vue.use(SocialSharing)
 
 if (process.env.NODE_ENV !== 'production') {
   require('vue-mock')

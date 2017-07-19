@@ -35,7 +35,11 @@ import TabSection from 'components/TabSection'
 
 export default {
   name: 'app',
-  components: {Sidebar, HeaderSection, TabSection},
+  components: {
+    Sidebar, 
+    HeaderSection, 
+    TabSection
+  },
   computed: {
     ...mapGetters(['isShowSidebar', 'isLoading', 'tabActive'])
   },
