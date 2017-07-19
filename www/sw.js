@@ -1,13 +1,19 @@
 (global => {
   'use strict';
 
-  var versionCache = '-chucknorris-20170719-11-05'
+  var versionCache = '-chucknorris-20170719-11-30'
 
   // Load the sw-tookbox library.
   importScripts('/chucknorris/sw/sw-toolbox.js');
 
   // Turn on debug logging, visible in the Developer Tools' console.
-  global.toolbox.options.debug = true;
+  // global.toolbox.options.debug = true;
+  toolbox.precache([
+    '/index.html', 
+    '/static/images/chucknorris-logo.png', 
+    '/static/images/chucknorris-gif.gif', 
+    '/static/images/loading.gif'
+    ]);
 
   toolbox.router.get('/chucknorris/sw/*', global.toolbox.cacheFirst, {
       cache: {

@@ -1,8 +1,7 @@
 <template>
   
   <social-sharing inline-template class="share"
-      url="https://mazipan.github.io/chucknorris/"
-      twitter-user="@Maz_Ipan"
+      twitter-user="Maz_Ipan"
       :quote="quote"
       :title="title"
       :description="description">
