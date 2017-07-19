@@ -12,7 +12,7 @@
     
 
     <div class="loading" v-show="isLoading">
-      <img src="/explore-github/static/images/loading.gif">
+      <img src="/chucknorris/static/images/loading.gif">
     </div>
 
     <div class="main">      
