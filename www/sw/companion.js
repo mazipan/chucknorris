@@ -17,8 +17,27 @@
   'use strict';
   var workerScript = document.currentScript.dataset.serviceWorker;
   if (workerScript && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register(workerScript).then(function(registration) {
-      console.log('scope : ', registration.scope);
+    navigator.serviceWorker.register(workerScript).then(function(reg) {
+    	console.log('Service Worker is registered', reg);
+      reg.addEventListener('updatefound', () => {
+		    // A wild service worker has appeared in reg.installing!
+		    const newWorker = reg.installing;
+
+		    newWorker.state;
+		    // "installing" - the install event has fired, but not yet complete
+		    // "installed"  - install complete
+		    // "activating" - the activate event has fired, but not yet complete
+		    // "activated"  - fully active
+		    // "redundant"  - discarded. Either failed install, or it's been
+		    //                replaced by a newer version
+
+		    newWorker.addEventListener('statechange', () => {
+		    	if (newWorker.state === 'redundant'){
+		    		reg.update()
+		    		window.location.reload()
+		    	}
+		    });
+		  });
     });
   }
 })();
