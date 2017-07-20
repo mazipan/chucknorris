@@ -1,10 +1,12 @@
 <template>
   
-  <social-sharing inline-template class="share"
-      twitter-user="Maz_Ipan"
+  <social-sharing inline-template 
+      class="share"
       :quote="quote"
       :title="title"
       :description="description"
+      url="https://goo.gl/7Ye2C1"
+      twitter-user="Maz_Ipan"
       hashtags="chucknorris">
 
     <div>
