@@ -12,11 +12,21 @@
       <img class="chuck__img" :src="randomJokesByCategory.icon_url" alt="">
       <div class="chuck__jokes">
         {{ randomJokesByCategory.value }}
-      </div>        
+      </div>
+
+      <social-sharing-section 
+      :title="randomJokesByCategory.value"
+      :description="randomJokesByCategory.value"
+      :quote="randomJokesByCategory.value">        
+      </social-sharing-section>    
+       
     </div>
 
     <div class="btn__jokes--wrapper">
-      <button @click="generateCategoryJokes" class="btn__jokes">GET OTHER JOKES</button>      
+      <button @click="generateCategoryJokes" class="btn__jokes">      
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+        GET OTHER JOKES
+      </button>      
     </div>
 
   </div>
@@ -24,8 +34,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import SocialSharingSection from 'components/SocialSharingSection'
+
 export default {
   name: 'CategoryJokesPage',
+  components: {
+    SocialSharingSection
+  },
   data () {
     return {
     }

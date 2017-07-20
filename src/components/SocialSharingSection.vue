@@ -4,7 +4,8 @@
       twitter-user="Maz_Ipan"
       :quote="quote"
       :title="title"
-      :description="description">
+      :description="description"
+      hashtags="chucknorris">
 
     <div>
         <network network="facebook">
@@ -47,15 +48,14 @@ export default {
 
   span{
     height: 29px;
-    width: 29px;
-    padding: 11px 6px;
+    padding: 11px 10px;
     border: 3px solid;
-    border-radius: 100%;
+    border-radius: .5em;
     text-align: center;
     text-decoration: none;
 
-    i{
-      font-size: 32px;
+    i{    
+      font-size: 20px;
       width: 30px;
       vertical-align: middle;
     }

@@ -8,9 +8,9 @@
       </div>
 
       <social-sharing-section 
-      title="Chuck Norris Jokes"
+      :title="randomJokes.value"
       :description="randomJokes.value"
-      :qoute="randomJokes.value">        
+      :quote="randomJokes.value">        
       </social-sharing-section>
 
     </div>
@@ -23,7 +23,10 @@
     </div>
 
     <div class="btn__jokes--wrapper">
-      <button @click="generateJokes" class="btn__jokes">GET OTHER JOKES</button>      
+      <button @click="generateJokes" class="btn__jokes">
+      <i class="fa fa-refresh" aria-hidden="true"></i>
+      GET OTHER JOKES
+      </button>      
     </div>
 
   </div>

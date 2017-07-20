@@ -12,7 +12,14 @@
       <img class="chuck__img" :src="searchDetailView.icon_url" alt="">
       <div class="chuck__jokes">
         {{ searchDetailView.value }}
-      </div>        
+      </div> 
+
+      <social-sharing-section 
+      :title="searchDetailView.value"
+      :description="searchDetailView.value"
+      :quote="searchDetailView.value">        
+      </social-sharing-section> 
+             
     </div>
 
   </div>
@@ -20,8 +27,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import SocialSharingSection from 'components/SocialSharingSection'
+
 export default {
   name: 'SearchDetailPage',
+  components: {
+    SocialSharingSection
+  },
   data () {
     return {
     }
