@@ -8,13 +8,31 @@
 
         <li class="sidebar__item">
           <router-link to="/" @click.native="navigateTo" class="sidebar__link">
-            <i class="fa fa-home"></i> Home
+            <i class="fa fa-home" aria-hidden="true"></i> Home
           </router-link>
         </li>
 
         <li class="sidebar__item">
+          <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
+            <i class="fa fa-random" aria-hidden="true"></i> Random Jokes
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
+            <i class="fa fa-th-list" aria-hidden="true"></i> Categories
+          </a>
+        </li>
+
+        <li class="sidebar__item">
+          <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
+            <i class="fa fa-search" aria-hidden="true"></i> Search Jokes
+          </a>
+        </li>
+
+        <li class="sidebar__item">
           <router-link to="/about" @click.native="navigateTo" class="sidebar__link">
-            <i class="fa fa-question-circle"></i> About
+            <i class="fa fa-question-circle" aria-hidden="true"></i> About
           </router-link>
         </li>
 
@@ -33,6 +51,15 @@ export default {
     ...mapGetters(['isShowSidebar'])
   },
   methods: {
+    changeTabActive: function (tabName) {      
+      this.$store.commit('setTabActive', tabName)
+      if (tabName === 'random') {
+        this.$router.push('/')
+      } else {
+        this.$router.push('/' + tabName) 
+      }
+      this.$store.commit('setShowSidebar', false)
+    },
     navigateTo: function (e) {
       this.$store.commit('setShowSidebar', false)
       e.preventDefault()
