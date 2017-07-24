@@ -1,7 +1,7 @@
 {
   "name": "Chuck Norris Jokes",
   "short_name": "ChuckNorris",
-  "start_url": "/chucknorris/index.html",
+  "start_url": "/chucknorris/index.html?utm_source=android&utm_medium=pwa",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#f05724",
