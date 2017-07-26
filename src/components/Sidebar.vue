@@ -36,6 +36,12 @@
           </router-link>
         </li>
 
+         <li class="sidebar__item">
+          <a href="/demo" class="sidebar__link">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> See Others Demo
+          </a>
+        </li>
+
       </ul>
     </div>
   </aside>
