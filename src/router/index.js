@@ -56,6 +56,4 @@ function view (name) {
   }
 }
 
-window.activeCollabRouter = router
-
 export default router
