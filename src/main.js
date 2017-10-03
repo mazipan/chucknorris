@@ -8,6 +8,8 @@ import SocialSharing from 'vue-social-sharing'
 
 import router from 'src/router'
 import store from 'src/store'
+import i18n from 'src/i18n'
+
 import App from 'App'
 
 Vue.use(VueResource)
@@ -27,8 +29,9 @@ if (process.env.NODE_ENV !== 'production') {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   template: '<App/>',
   store,
+  i18n,
+  router,
   components: {App}
 })
