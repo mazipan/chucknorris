@@ -8,37 +8,37 @@
 
         <li class="sidebar__item">
           <router-link to="/" @click.native="navigateTo" class="sidebar__link">
-            <i class="fa fa-home" aria-hidden="true"></i> Home
+            <i class="fa fa-home" aria-hidden="true"></i> {{ $t('sidebar.home') }}
           </router-link>
         </li>
 
         <li class="sidebar__item">
           <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
-            <i class="fa fa-random" aria-hidden="true"></i> Random Jokes
+            <i class="fa fa-random" aria-hidden="true"></i> {{ $t('tab.random') }}
           </a>
         </li>
 
         <li class="sidebar__item">
           <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
-            <i class="fa fa-th-list" aria-hidden="true"></i> Categories
+            <i class="fa fa-th-list" aria-hidden="true"></i> {{ $t('tab.categories') }}
           </a>
         </li>
 
         <li class="sidebar__item">
           <a href="javascript:void" @click="changeTabActive('random')" class="sidebar__link">
-            <i class="fa fa-search" aria-hidden="true"></i> Search Jokes
+            <i class="fa fa-search" aria-hidden="true"></i> {{ $t('tab.search') }}
           </a>
         </li>
 
         <li class="sidebar__item">
           <router-link to="/about" @click.native="navigateTo" class="sidebar__link">
-            <i class="fa fa-question-circle" aria-hidden="true"></i> About
+            <i class="fa fa-question-circle" aria-hidden="true"></i> {{ $t('sidebar.about') }}
           </router-link>
         </li>
 
          <li class="sidebar__item">
           <a href="/demo" class="sidebar__link">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> See Others Demo
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ $t('sidebar.otherDemo') }}
           </a>
         </li>
 

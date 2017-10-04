@@ -2,9 +2,9 @@
   <div class="grid__row">
 
     <div class="search">
-      <input class="search__text" type="text" name="Search" v-model="searchText" placeholder="Type Keyword and Search Jokes">
+      <input class="search__text" type="text" name="Search" v-model="searchText" :placeholder="$t('search.placeholder')">
       <button class="search__btn" @click="searchJokes">
-        <i class="fa fa-search" aria-hidden="true"></i> Search
+        <i class="fa fa-search" aria-hidden="true"></i> {{ $t('search.button') }}
       </button>
     </div>
 
@@ -26,7 +26,7 @@
     <div class="empty-state"  v-if="!searchResultJokes && searchCount === 0">      
       <img class="icon" :src="iamChuckNorris"/>
       <br/><br/>
-      Lets Search Chuck Norris Jokes with Some Keyword!
+      {{ $t('search.emptyState') }}
       <br/>
     </div>
 

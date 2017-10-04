@@ -1,3 +1,36 @@
 {
-  
+  "project": {
+    "title": "Chuck Norris Jokes",
+    "desc": "Chuck Norris Jokes dibuat menggunakan VueJS"
+  },
+  "common": {
+    "by": "oleh"
+  },
+  "about": {
+    "seeSourceCode": "Lihat kode sumber",
+    "craftedWith": "Dibuat dengan"
+  },
+  "action": {
+    "getOtherJokes": "DAPATKAN JOKES LAIN",
+    "back": "kembali"
+  },
+  "home": {
+    "emptyJokes": "Tidak ada jokes yang ditemukan!"
+  },
+  "search": {
+    "placeholder": "Ketik keyword dan cari jokes",
+    "button": "Cari",
+    "emptyState": "Silahkan cari jokes dengan keyword lainnya!"
+  },
+  "tab": {
+    "random": "Acak",
+    "categories": "Kategori",
+    "search": "Cari"
+  },
+  "sidebar": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "otherDemo": "Demo Lainnya"
+  }
 }
+

@@ -1,8 +1,8 @@
 <template>
   <div class="grid__row about">
     <img v-lazy="'/chucknorris/static/images/chucknorris-logo.png'" />
-    <h1>Chuck Norris Jokes</h1>
-    <h5>See Source Code : 
+    <h1>{{ $t('project.title') }}</h1>
+    <h5>{{ $t('about.seeSourceCode') }} : 
       <a href="https://github.com/mazipan/chucknorris" target="_blank">
         https://github.com/mazipan/chucknorris
       </a>
@@ -14,7 +14,7 @@
     </h5>
     <br>
     <p>
-      <h5>Crafted with <i class="fa fa-heart"></i> by : </h5>
+      <h5>{{ $t('about.craftedWith') }} <i class="fa fa-heart"></i> {{ $t('common.by') }} : </h5>
       <a href="mailto:mazipanneh@gmail.com">
         <img v-lazy="'https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600'" alt="Email" class="badge">
       </a>

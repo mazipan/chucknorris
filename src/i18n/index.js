@@ -6,7 +6,7 @@ import id from './id.json'
 Vue.use(VueI18n)
 
 export default new VueI18n({
-  locale: 'ID',
+  locale: 'EN',
   messages: {
     'EN': en,
     'ID': id

@@ -4,7 +4,7 @@
     <div class="nav">
       <button class="nav__btn" @click="backToSearch">
         <i class="fa fa-angle-left" aria-hidden="true"></i> 
-        <span>Back to Search Result</span>
+        <span>{{ $t('action.back') }}</span>
       </button>
     </div>
 

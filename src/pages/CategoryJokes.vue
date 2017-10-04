@@ -4,7 +4,7 @@
     <div class="nav">
       <button class="nav__btn" @click="backToCategories">
         <i class="fa fa-angle-left" aria-hidden="true"></i> 
-        <span>Back to Categories</span>
+        <span>{{ $t('action.back') }}</span>
       </button>
     </div>
 
@@ -25,7 +25,7 @@
     <div class="btn__jokes--wrapper">
       <button @click="generateCategoryJokes" class="btn__jokes">      
         <i class="fa fa-refresh" aria-hidden="true"></i>
-        GET OTHER JOKES
+        {{ $t('action.getOtherJokes') }}
       </button>      
     </div>
 

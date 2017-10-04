@@ -18,14 +18,14 @@
     <div class="empty-state" v-if="!randomJokes || !randomJokes.value">      
       <img class="icon" :src="iamChuckNorris"/>
       <br/><br/>
-      Not found any jokes today!
+      {{ $t('home.emptyJokes') }}
       <br/>
     </div>
 
     <div class="btn__jokes--wrapper">
       <button @click="generateJokes" class="btn__jokes">
       <i class="fa fa-refresh" aria-hidden="true"></i>
-      GET OTHER JOKES
+        {{ $t('action.getOtherJokes') }}
       </button>      
     </div>
 

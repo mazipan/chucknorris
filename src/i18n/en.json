@@ -1,3 +1,35 @@
 {
-  
+  "project": {
+    "title": "Chuck Norris Jokes",
+    "desc": "Chuck Norris Jokes Built With VueJS"
+  },
+  "common": {
+    "by": "by"
+  },
+  "about": {
+    "seeSourceCode": "See source code",
+    "craftedWith": "Crafted with"
+  },
+  "action": {
+    "getOtherJokes": "GET OTHER JOKES",
+    "back": "Back"
+  },
+  "home": {
+    "emptyJokes": "Not found any jokes today!"
+  },
+  "search": {
+    "placeholder": "Type Keyword and Search Jokes",
+    "button": "Search",
+    "emptyState": "Lets Search Chuck Norris Jokes with Some Keyword!"
+  },
+  "tab": {
+    "random": "Random",
+    "categories": "Categories",
+    "search": "Search"
+  },
+  "sidebar": {
+    "home": "Home",
+    "about": "About",
+    "otherDemo": "Other Demo"
+  }
 }

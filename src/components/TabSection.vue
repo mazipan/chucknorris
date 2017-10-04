@@ -5,7 +5,7 @@
           @click="changeTabActive('random')"
           class="nav__link nav__link--left"
           :class="{'nav__link--active': tabActive === 'random'}">
-        <i class="fa fa-random" aria-hidden="true"></i> RANDOM
+        <i class="fa fa-random" aria-hidden="true"></i> {{ $t('tab.random') }}
       </a>
     </div>
     <div class="nav__item">
@@ -13,7 +13,7 @@
           @click="changeTabActive('categories')"
           class="nav__link"
           :class="{'nav__link--active': tabActive === 'categories'}">
-        <i class="fa fa-th-list" aria-hidden="true"></i> CATEGORIES
+        <i class="fa fa-th-list" aria-hidden="true"></i> {{ $t('tab.categories') }}
       </a>
     </div>
     <div class="nav__item">
@@ -21,7 +21,7 @@
           @click="changeTabActive('search')"
           class="nav__link nav__link--right"
           :class="{'nav__link--active': tabActive === 'search'}">
-        <i class="fa fa-search" aria-hidden="true"></i> SEARCH
+        <i class="fa fa-search" aria-hidden="true"></i> {{ $t('tab.search') }}
       </a>
     </div>
   </nav>
@@ -63,6 +63,7 @@ export default {
     position: relative;
     display: block;
     color: #000;
+    text-transform: uppercase;
     text-decoration: none;
     padding: 10px;
     background-color: #f05724;
