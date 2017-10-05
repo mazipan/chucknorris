@@ -55,6 +55,7 @@ export default {
     border-radius: .5em;
     text-align: center;
     text-decoration: none;
+    cursor:pointer;
 
     i{    
       font-size: 20px;
