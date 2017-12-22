@@ -9,7 +9,7 @@ Chuck Norris Jokes built with VueJS + api.chucknorris.io
 [![Travis](https://img.shields.io/travis/mazipan/chucknorris.svg)](https://travis-ci.org/mazipan/chucknorris)
 [![codecov](https://codecov.io/gh/mazipan/chucknorris/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/chucknorris)
 
-[![ChuckNorris](https://raw.githubusercontent.com/mazipan/chucknorris/master/static/images/chucknorris-logo.png)](https://mazipan.github.io/chucknorris/)
+[![ChuckNorris](https://github.com/mazipan/chucknorris/blob/master/images/chucknorris-gif.gif?raw=true)](https://mazipan.github.io/chucknorris/)
 
 
 ## Who is Chuck Norris ?
