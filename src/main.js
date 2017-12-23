@@ -1,6 +1,3 @@
-/* eslint-disable space-before-blocks */
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueLazyload from 'vue-lazyload'
 import SocialSharing from 'vue-social-sharing'
@@ -20,7 +17,6 @@ Vue.use(VueLazyload, {
 })
 
 if (process.env.NODE_ENV !== 'production') {
-  require('vue-mock')
   Vue.config.devtools = true
 }
 

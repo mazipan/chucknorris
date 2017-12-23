@@ -87,10 +87,12 @@ export const mutations = {
 
 export const actions = {
   getRandomJokes ({commit}) {
+    console.log('calling action getRandomJokes()')
     commit('setLoading', true)
     let timeStamp = new Date().getTime()
     axios.get(`${basePath}jokes/random?timestamp=${timeStamp}`)
       .then(function (response) {
+        console.log('response ', response)
         commit('setLoading', false)
         commit('setRandomJokes', response.data)
       })
@@ -99,10 +101,12 @@ export const actions = {
       });
   },
   getRandomJokesByCategory ({commit}, category) {
+    console.log('calling action getRandomJokesByCategory()')
     commit('setLoading', true)
     let timeStamp = new Date().getTime()
     axios.get(`${basePath}jokes/random?category=${category}&timestamp=${timeStamp}`)
       .then(function (response) {
+        console.log('response ', response)
         commit('setLoading', false)
         commit('setRandomJokesByCategory', response.data)
       })
@@ -111,10 +115,12 @@ export const actions = {
       });
   },
   getCategories ({commit}) {
+    console.log('calling action getCategories()')
     commit('setLoading', true)
     let timeStamp = new Date().getTime()
     axios.get(`${basePath}jokes/categories?timestamp=${timeStamp}`)
       .then(function (response) {
+        console.log('response ', response)
         commit('setLoading', false)
         commit('setCategories', response.data)
       })
@@ -123,10 +129,12 @@ export const actions = {
       });
   },
   searchJokes ({commit}, keyword) {
+    console.log('calling action searchJokes()')
     commit('setLoading', true)
     let timeStamp = new Date().getTime()
     axios.get(`${basePath}jokes/search?query=${keyword}&timestamp=${timeStamp}`)
       .then(function (response) {
+        console.log('response ', response)
         commit('setLoading', false)
         commit('setSearchResultJokes', response.data)
       })
