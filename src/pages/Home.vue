@@ -7,15 +7,15 @@
         {{ randomJokes.value }}
       </div>
 
-      <social-sharing-section 
+      <social-sharing-section
       :title="randomJokes.value"
       :description="randomJokes.value"
-      :quote="randomJokes.value">        
+      :quote="randomJokes.value">
       </social-sharing-section>
 
     </div>
 
-    <div class="empty-state" v-if="!randomJokes || !randomJokes.value">      
+    <div class="empty-state" v-if="!randomJokes || !randomJokes.value">
       <img class="icon" :src="iamChuckNorris"/>
       <br/><br/>
       {{ $t('home.emptyJokes') }}
@@ -26,7 +26,15 @@
       <button @click="generateJokes" class="btn__jokes">
       <i class="fa fa-refresh" aria-hidden="true"></i>
         {{ $t('action.getOtherJokes') }}
-      </button>      
+      </button>
+    </div>
+
+    <div class="google-ads">
+      <InArticleAdsense
+          root-class="wrapper VueInArticleAdsense"
+          :data-ad-client="client"
+          :data-ad-slot="slot">
+      </InArticleAdsense>
     </div>
 
   </div>
@@ -34,9 +42,11 @@
 
 <script>
 import SocialSharingSection from 'components/SocialSharingSection.vue'
+import mixin from '@/mixins'
 
 export default {
   name: 'HomePage',
+  mixins: [mixin],
   components: {
     SocialSharingSection
   },
@@ -50,7 +60,7 @@ export default {
     },
     randomJokes () {
       return this.$store.getters.randomJokes
-    } 
+    }
   },
   methods: {
     generateJokes: function () {
@@ -66,6 +76,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.google-ads{
+  width: 90%;
+}
+
 .empty-state{
   text-align: center;
   font-size: 24px;

@@ -3,7 +3,7 @@
 
     <div class="nav">
       <button class="nav__btn" @click="backToSearch">
-        <i class="fa fa-angle-left" aria-hidden="true"></i> 
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
         <span>{{ $t('action.back') }}</span>
       </button>
     </div>
@@ -12,14 +12,22 @@
       <img class="chuck__img" :src="searchDetailView.icon_url" alt="">
       <div class="chuck__jokes">
         {{ searchDetailView.value }}
-      </div> 
+      </div>
 
-      <social-sharing-section 
+      <social-sharing-section
       :title="searchDetailView.value"
       :description="searchDetailView.value"
-      :quote="searchDetailView.value">        
-      </social-sharing-section> 
-             
+      :quote="searchDetailView.value">
+      </social-sharing-section>
+
+      <div class="google-ads">
+        <InArticleAdsense
+            root-class="wrapper VueInArticleAdsense"
+            :data-ad-client="client"
+            :data-ad-slot="slot">
+        </InArticleAdsense>
+      </div>
+
     </div>
 
   </div>
@@ -27,9 +35,11 @@
 
 <script>
 import SocialSharingSection from 'components/SocialSharingSection.vue'
+import mixin from '@/mixins'
 
 export default {
   name: 'SearchDetailPage',
+  mixins: [mixin],
   components: {
     SocialSharingSection
   },
@@ -59,11 +69,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.google-ads{
+  width: 90%;
+}
+
 .nav{
   &__btn{
     outline: none;
     border: none;
-    background-color: transparent;    
+    background-color: transparent;
     color: #f05724;
     i{
       font-size: 40px;
